@@ -10,9 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("Press to open the Context Menu!")
+        .contextMenu {
+            Button(action: {
+              // copy the content to the paste board
+            }) {
+                Text("Copy")
+                Image(systemName: "doc.on.doc")
+            }
+        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
